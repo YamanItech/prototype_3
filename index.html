@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Search the weather</title>
+  <link rel="stylesheet" href="./css/style.css">
+  <style>
+    .button-container {
+      position: fixed;
+      top: 20px;
+      right: 20px;
+    }
+    .historyButton{
+      font-size: 20px;
+      background-color: rgb(201, 22, 22);
+      color:#fff;
+    }
+    :hover.historyButton{
+      font-size: 20px;
+      background-color: rgb(14, 12, 12);
+      color:white;
+    }
+  </style>
+</head>
+<body>
+  <div class="button-container">
+    <!-- History button -->
+    <section class="history">
+      <button class="historyButton">Show history</button>
+    </section>
+  </div>
+  <header class="container flex">
+    <!-- Search input and button -->
+    <div class="search">
+      <input type="text" placeholder="Search for a city...">
+      <span><button><img class="img-1" src="./img/search.png" alt=""></button></span>
+    </div>
+  </header>
+  <div class="middle container flex-m">
+    <!-- Placeholder for weather information -->
+    <div><h1>Expected weather for <span id="place"></span></h1></div>
+    <div><h1 id="date"></h1></div>
+  </div>
+  <section class="container">
+    <!-- Weather data display section -->
+    <div class="box flex">
+      <!-- High Temperature box -->
+      <div class="box1">
+        <h1>High Temperature<img class="img" src="./img/high-temp.png" alt=""></h1>
+        <p id="high-t" class="txt"></p>
+      </div>
+      <!-- Current weather box -->
+      <div class="box2">
+        <div><img id="icon" src="" alt=""></div>
+        <div><h1 id="des"></h1></div>
+      </div>
+      <!-- Low Temperature box -->
+      <div class="box1">
+        <h1>Low Temperature<img class="img" src="./img/low-temp.png" alt=""></h1>
+        <p id="low-t" class="txt"></p>
+      </div>
+    </div>
+  </section>
+  <section class="container main">
+    <!-- Additional weather data display section -->
+    <div class="row flex">
+      <div class="col flex-c">
+        <!-- Temperature and Wind data boxes -->
+        <div class="box3">
+          <div><h1>Temperature<img class="img" src="./img/temperature.png" alt=""></h1></div>
+          <p id="Temperature" class="txt"></p>
+        </div>
+        <div class="box3">
+          <div><h1>Wind<img class="img" src="./img/wind.png" alt=""></h1></div>
+          <p id="Wind" class="txt"></p>
+        </div>
+      </div>
+      <div class="col flex-c">
+        <!-- Pressure and Humidity data boxes -->
+        <div class="box3">
+          <div><h1>Pressure<img class="img" src="./img/pressure.png" alt=""></h1></div>
+          <p id="pressure" class="txt"></p>
+        </div>
+        <div class="box3">
+          <div><h1>Humidity<img class="img" src="./img/Humidity.png" alt=""></h1></div>
+          <p id="Humidity" class="txt"></p>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- Load the JavaScript file for functionality -->
+  <script src="./js/script.js"></script>
+</body>
+</html>
